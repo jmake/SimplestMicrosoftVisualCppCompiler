@@ -20,3 +20,9 @@ Set-Location BUILD
 
 cmake.exe .. -G Ninja 
 
+ninja.exe 
+
+Get-ChildItem 
+
+.\simplest.exe 
+
