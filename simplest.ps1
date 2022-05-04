@@ -15,6 +15,8 @@ if($VSTOOLS)
            
 cl.exe 
 
-New-Item -ItemType Directory "BUILD"
+New-Item -ItemType Directory BUILD
+Set-Location BUILD
 
+cmake.exe .. -G Ninja 
 
