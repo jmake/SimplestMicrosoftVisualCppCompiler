@@ -1,0 +1,52 @@
+name: SetUpVCpp  
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  # Path to the solution file relative to the root of the project.
+  SOLUTION_FILE_PATH: .
+
+  # Configuration type to build.
+  # You can convert this to a build matrix if you need coverage of multiple configuration types.
+  # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+  BUILD_CONFIGURATION: Release
+
+
+permissions:
+  contents: read
+  
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: clexe 
+        shell: powershell 
+        run: |
+          ls  
+          pwd 
+          .\simplest.ps1
+
+ 
+      - name: cmake ??
+        shell: powershell 
+        run: |
+          cmake --version 
+     
+     
+      - name: gccexe 
+        shell: powershell 
+        run: |
+          gcc.exe --version 
+        
+        
+        
+        
+        
